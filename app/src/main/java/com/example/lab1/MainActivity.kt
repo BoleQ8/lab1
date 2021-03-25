@@ -60,6 +60,9 @@ class MainActivity : AppCompatActivity() {
                         przyciskOceny.visibility = Button.VISIBLE
                     }
                 }
+                else{
+                    przyciskOceny.visibility = Button.INVISIBLE
+                }
             }
         }
         imie.addTextChangedListener(ocenyTextWatcher)
