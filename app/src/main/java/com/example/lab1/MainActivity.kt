@@ -14,7 +14,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         val imie = findViewById<EditText>(R.id.imie)
         val nazwisko = findViewById<EditText>(R.id.nazwisko)
         val liczbaOcen = findViewById<EditText>(R.id.ocena)
@@ -61,23 +60,10 @@ class MainActivity : AppCompatActivity() {
                         przyciskOceny.visibility = Button.VISIBLE
                     }
                 }
-
             }
         }
-      /*  liczbaOcen.addTextChangedListener(object: TextWatcher{
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-            override fun afterTextChanged(s: Editable?) {}
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                val test = liczbaOcen.text.toString()
-                if(!test.equals("")) {
-                    if(liczbaOcen.text.toString().toInt() !in 5..15){
-                        przyciskOceny.visibility = Button.INVISIBLE
-                    }
-                }
-            }
-        }) */
         imie.addTextChangedListener(ocenyTextWatcher)
         nazwisko.addTextChangedListener(ocenyTextWatcher)
-      liczbaOcen.addTextChangedListener(ocenyTextWatcher)
+        liczbaOcen.addTextChangedListener(ocenyTextWatcher)
     }
 }
