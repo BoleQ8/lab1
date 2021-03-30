@@ -7,4 +7,15 @@
     <string name="editTextImie">Wpisz imię</string>
     <string name="editTextNazwisko">Wpisz nazwisko</string>
     <string name="editTextOceny">Wpisz liczbę ocen (5–15)</string>
+    <string name="dwa">2</string>
+    <string name="trzy">3</string>
+    <string name="cztery">4</string>
+    <string name="piec">5</string>
+    <string-array name="nazwyPrzedmiotow">
+        <item>Fiz.</item>
+        <item>Mat.</item>
+        <item>El.</item>
+        <item>TC</item>
+        <item>PP</item>
+    </string-array>
 </resources>

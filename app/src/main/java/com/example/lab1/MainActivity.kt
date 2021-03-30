@@ -1,5 +1,6 @@
 package com.example.lab1
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -52,5 +53,13 @@ class MainActivity : AppCompatActivity() {
         imie.addTextChangedListener(ocenyTextWatcher)
         nazwisko.addTextChangedListener(ocenyTextWatcher)
         liczbaOcen.addTextChangedListener(ocenyTextWatcher)
+
+        przyciskOceny.setOnClickListener{
+            val liczbaOcen = liczbaOcen.text.toString().toInt()
+            val intent = Intent(this,MainActivity2::class.java)
+            intent.putExtra("liczbaOcen",liczbaOcen)
+            startActivity(intent)
+
+        }
     }
 }

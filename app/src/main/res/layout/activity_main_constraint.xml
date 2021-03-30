@@ -6,7 +6,7 @@
 
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/przedmiot"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/imie"
@@ -22,7 +22,7 @@
         android:importantForAutofill="no"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintStart_toEndOf="@+id/przedmiot"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
