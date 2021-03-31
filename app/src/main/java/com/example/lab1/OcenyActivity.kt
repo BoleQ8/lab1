@@ -10,10 +10,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 
-class MainActivity2 : AppCompatActivity() {
+class OcenyActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main2)
+        setContentView(R.layout.activity_oceny)
         val intent = getIntent()
         val LiczbaOcenInt = intent.getIntExtra("liczbaOcen",0)
         val exampleList = lista(LiczbaOcenInt)

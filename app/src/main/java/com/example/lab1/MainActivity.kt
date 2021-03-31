@@ -8,7 +8,6 @@ import android.text.TextWatcher
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import org.w3c.dom.Text
 
 
 class MainActivity : AppCompatActivity() {
@@ -56,7 +55,7 @@ class MainActivity : AppCompatActivity() {
 
         przyciskOceny.setOnClickListener{
             val liczbaOcen = liczbaOcen.text.toString().toInt()
-            val intent = Intent(this,MainActivity2::class.java)
+            val intent = Intent(this,OcenyActivity::class.java)
             intent.putExtra("liczbaOcen",liczbaOcen)
             startActivity(intent)
 
