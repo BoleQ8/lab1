@@ -1,11 +1,8 @@
 package com.example.lab1
 
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
-import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -18,7 +15,7 @@ class OcenyActivity : AppCompatActivity() {
         val LiczbaOcenInt = intent.getIntExtra("liczbaOcen",0)
         val exampleList = lista(LiczbaOcenInt)
         val recyclerView: RecyclerView = findViewById(R.id.recycler1)
-        recyclerView.adapter = RecyclerAdapter(exampleList)
+        recyclerView.adapter = InteraktywnyAdapterTablicy(exampleList)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.setHasFixedSize(true)
 
