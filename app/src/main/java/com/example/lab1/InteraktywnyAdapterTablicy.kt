@@ -6,15 +6,15 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 
-class InteraktywnyAdapterTablicy(private val exampleList: List<ExampleItem>) : RecyclerView.Adapter<InteraktywnyAdapterTablicy.myViewHolder>(){
+class InteraktywnyAdapterTablicy(private val exampleList: List<ExampleItem>) : RecyclerView.Adapter<InteraktywnyAdapterTablicy.OcenyViewHolder>(){
 
-        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): myViewHolder {
+        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OcenyViewHolder {
             val layoutInflater = LayoutInflater.from(parent.context).inflate(R.layout.list_row,
                     parent, false)
-            return myViewHolder(layoutInflater)
+            return OcenyViewHolder(layoutInflater)
         }
 
-        override fun onBindViewHolder(holder: myViewHolder, position: Int) {
+        override fun onBindViewHolder(holder: OcenyViewHolder, position: Int) {
             val currentItem = exampleList[position]
             holder.textView1.text = currentItem.text1
 
@@ -24,7 +24,7 @@ class InteraktywnyAdapterTablicy(private val exampleList: List<ExampleItem>) : R
         override fun getItemCount() = exampleList.size
 
 
-    class myViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+    inner class OcenyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val textView1: TextView = itemView.findViewById(R.id.nazwa_p)
     }
     }
